@@ -1,0 +1,164 @@
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f3f4f6;
+      /* display: flex; */
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      padding: 2rem;
+    }
+    .bg-txt{
+      font-size: 15px;
+      transform: rotate(90deg);
+    }
+    header {
+      width: 98%;
+      margin: 10px auto;
+      display: flex;
+      /* justify-content: space-between; */
+      align-items: center;
+      /* background-color: black; */
+      color: white;
+      padding: 12px 20px;
+      border-radius: 20px;
+  }
+  header h1{
+      font-family: "Shadows Into Light", cursive;
+      font-size: 30px;
+      text-align: center;
+      /* width: 100%; */
+      color: black;
+      font-weight: bold;
+  }
+  sub{
+    color: white;
+    background:red;
+    padding: 12px 8px;
+    border-radius: 15px;
+    margin-left: 10px;
+  }
+  .bg-txt sub{
+    font-size: 8px;
+    padding: 4px 8px;
+    position: relative;
+    bottom: 5px;
+  }
+  header img {
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+      vertical-align: middle;
+      /* filter: invert(1); */
+  }
+  header h1 span {
+      font-size: 12px;
+      /* color: #ccc; */
+      
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      width: 100%;
+      max-width: 1200px;
+    }
+    .input-section, .preview-section {
+      background-color: #fff;
+      border-radius: 0.75rem;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      padding: 2rem;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid #d1d5db;
+      border-radius: 0.375rem;
+      margin-top: 0.5rem;
+      resize: vertical;
+      font-size: 1rem;
+    }
+    textarea{
+      min-height: 80px;
+    }
+    button {
+      background-color: #2563eb;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+    button:hover {
+      background-color: #1d4ed8;
+    }
+    
+    /* Resume-specific styles */
+    .resume-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .resume-header h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 0.25rem;
+    }
+    .resume-header h2 {
+      font-size: 1.25rem;
+      font-weight: normal;
+      color: #6b7280;
+      text-transform: uppercase;
+    }
+    .resume-content {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 2rem;
+    }
+    .resume-section-title {
+      font-size: 1.125rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+      color: #1f2937;
+    }
+    .resume-list-item {
+      list-style: disc;
+      margin-left: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+      color: #4b5563;
+    }
+    .resume-text {
+      font-size: 0.9rem;
+      color: #4b5563;
+      margin-bottom: 0.5rem;
+      line-height: 1.5;
+    }
+
+    /* This media query is crucial. It only applies styles when printing. */
+    @media print {
+      body {
+        background-color: #fff;
+        padding: 0;
+        margin: 0;
+      }
+      .input-section, .print-button-container {
+        display: none; /* Hide the input form and button from the print output */
+      }
+      .container {
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 0;
+        box-shadow: none;
+        width: 8.5in;
+      }
+      .preview-section {
+        box-shadow: none;
+        width: 100%;
+        padding: 1in; /* Add some padding for a clean print margin */
+      }
+    }
